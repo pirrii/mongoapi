@@ -6,6 +6,7 @@ from routes.recomendacion_routes import router as recomendacion_router
 app = FastAPI(title="apimongo")
 
 app.include_router(producto_router, prefix="/api")
+app.include_router(recomendacion_router , prefix="/api")
 
 @app.get("/")
 async def root():
